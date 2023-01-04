@@ -45,4 +45,15 @@ router.delete('/:id', async(req,res) => {
     }
 })
 
+router.patch('/:id', async(req,res) => {
+    try {
+        const bookings = await Booking.findById(req.params.id)
+        bookings.seatsSelected = req.body.seatsSelected
+        const a1 = await bookings.save()
+        res.json(a1)
+    } catch (err) {
+        res.send("Error" + err)
+    }
+})
+
 module.exports = router
