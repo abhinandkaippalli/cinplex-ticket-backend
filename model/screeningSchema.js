@@ -12,6 +12,11 @@ const screeningSchema = new mongoose.Schema({
     time : {
         type : Date,
         required : true,
+    },
+    status : {
+        type : Boolean,
+        default : false,
+        required : true,
     }
 })
 

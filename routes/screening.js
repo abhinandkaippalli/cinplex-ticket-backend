@@ -52,6 +52,7 @@ router.patch('/:id', async(req,res) => {
        const screen = await Screening.findById(req.params.id)
        screen.screen = req.body.screen
        screen.time = req.body.time
+       screen.status = req.body.status
        const a3 = await screen.save()
        res.json(a3)
     }

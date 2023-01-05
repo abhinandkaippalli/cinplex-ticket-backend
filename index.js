@@ -23,6 +23,12 @@ app.use('/movie',movieRouter)
 const screeningRouter = require('./routes/screening')
 app.use('/screening',screeningRouter)
 
+const screenRouter = require('./routes/screen')
+app.use('/screen',screenRouter)
+
+const userRouter = require('./routes/user')
+app.use('/user',userRouter)
+
 app.listen(3000, () => {
   console.log(`Example app listening on port ${3000}`)
 })
