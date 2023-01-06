@@ -14,9 +14,11 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const addMovie = new Movie({
+        image : req.body.image,
         name: req.body.name,
         director: req.body.director,
         duration: req.body.duration,
+        about: req.body.about,
         rating: req.body.rating
     })
     try {
