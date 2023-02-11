@@ -17,6 +17,7 @@ router.post('/', async (req, res) => {
         movie: req.body.movie,
         screen: req.body.screen,
         time: req.body.time,
+        date:req.body.date
     })
     try {
         const a2 = await addScreen.save()

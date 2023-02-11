@@ -9,14 +9,15 @@ const screeningSchema = new mongoose.Schema({
         type : Number,
         reaquired : true
     },
-    time : {
-        type : Date,
+    date : {
+        type : String,
+        format : Date,
         required : true,
     },
-    status : {
-        type : Boolean,
-        default : false,
-        required : true,
+    time : {
+        type : String,
+        format : Date,
+        required : true
     }
 })
 

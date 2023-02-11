@@ -12,7 +12,7 @@ const mongoose = require('mongoose')
     },
     
     mobileNumber : {
-        type : String,
+        type : Number,
         required : true
     },
 

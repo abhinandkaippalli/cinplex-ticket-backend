@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 const screenSchema = new mongoose.Schema ({
     screen : {
-        type : Boolean,
+        type : String,
+        format : Boolean,
         required : true,
         default : false
     }

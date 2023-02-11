@@ -29,6 +29,9 @@ app.use('/screen',screenRouter)
 const userRouter = require('./routes/user')
 app.use('/user',userRouter)
 
+const ratingRouter = require('./routes/rating')
+app.use('/rating',ratingRouter)
+
 app.listen(3000, () => {
   console.log(`Example app listening on port ${3000}`)
 })

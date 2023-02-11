@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
         director: req.body.director,
         duration: req.body.duration,
         about: req.body.about,
-        rating: req.body.rating
+        type: req.body.type
     })
     try {
         const a2 = await addMovie.save()
@@ -52,7 +52,7 @@ router.delete('/:id', async(req,res) => {
 router.patch('/:id',async(req,res)=> {
     try{
         const movieList = await Movie.findById(req.params.id) 
-        movieList.rating = req.body.rating
+        movieList.type = req.body.type
         const a2 = await movieList.save()
         res.json(a2)   
     }catch(err){
